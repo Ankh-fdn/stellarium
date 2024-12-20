@@ -258,7 +258,7 @@ To prepare a static kit, prepare src package of Qt 5.15.12, and configure compil
 Perl and Visual Studio 2019). Enter src folder:
 
 ```
-configure.bat -static -prefix "D:\Qt\msvc2019_static" -confirm-license -opensource  -debug-and-release -platform win32-msvc  -nomake examples -nomake tests  -plugin-sql-sqlite -plugin-sql-odbc -qt-zlib -qt-libpng -qt-libjpeg -opengl desktop -mp
+configure.bat -static -prefix "D:\Qt\msvc2019_static" -confirm-license -opensource -debug-and-release -platform win32-msvc -nomake examples -nomake tests -DQT_FEATURE_sql_odbc=ON -DQT_FEATURE_sql_sqlite=ON -qt-zlib -qt-libpng -qt-libjpeg -opengl desktop
 nmake
 nmake install
 ```
